@@ -55,7 +55,7 @@ jobs:
       run: ""
     - name: "rack-protection tests outcome: ${{ steps.protection-tests.outcome }}"
       run: ""
-    - uses: zzak/action-discord@v6
+    - uses: zzak/action-discord@v8
       if: failure() && github.ref_name == 'main'
       continue-on-error: true # always allow failure
       with:
@@ -163,7 +163,7 @@ jobs:
     - name: "sinatra-contrib tests outcome: ${{ steps.contrib-tests.outcome }}"
       run: ""
 
-    - uses: zzak/action-discord@v6
+    - uses: zzak/action-discord@v8
       if: failure() && github.ref_name == 'main'
       continue-on-error: true # always allow failure
       with:
