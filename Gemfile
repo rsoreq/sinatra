@@ -60,6 +60,7 @@ gem 'webrick'
 # sass-embedded depends on google-protobuf
 # which fails to be installed on JRuby and TruffleRuby under aarch64
 # https://github.com/jruby/jruby/issues/8062
+
 # https://github.com/protocolbuffers/protobuf/issues/11935
 java    = %w(jruby truffleruby).include?(RUBY_ENGINE)
 aarch64 = RbConfig::CONFIG["target_cpu"] == 'aarch64'
