@@ -28,7 +28,7 @@ gem 'zeitwerk', zeitwerk_version
 
 gem 'minitest', '~> 5.0'
 gem 'rack-test'
-gem 'rubocop', '~> 1.32.0', require: false
+gem 'rubocop', '~> 1.69.0', require: false
 gem 'yard' # used by rake doc
 
 gem 'rack-protection', path: 'rack-protection'
