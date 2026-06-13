@@ -18,7 +18,7 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: ruby
-      - uses: rubygems/configure-rubygems-credentials@v1.0.0
+      - uses: rubygems/configure-rubygems-credentials@dc5a8d8553e6ee01fc26761a49e99e733d17954a # v2.1.0
       # ensure gems can be built and installed
       - run: bundle exec rake install:rack-protection
       - run: bundle exec rake install:sinatra
