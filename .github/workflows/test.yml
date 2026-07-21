@@ -36,7 +36,7 @@ jobs:
     env:
       rack: ${{ matrix.rack }}
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
     - uses: ruby/setup-ruby@v1
       continue-on-error: ${{ matrix.allow-failure || false }}
       id: setup-ruby
@@ -55,7 +55,7 @@ jobs:
       run: ""
     - name: "rack-protection tests outcome: ${{ steps.protection-tests.outcome }}"
       run: ""
-    - uses: zzak/action-discord@v6
+    - uses: zzak/action-discord@2b8e933e66309e03209090ee1382d5963d98f788 # v6
       if: failure() && github.ref_name == 'main'
       continue-on-error: true # always allow failure
       with:
@@ -130,7 +130,7 @@ jobs:
           libxslt-dev \
           libyaml-dev
 
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
     - uses: ruby/setup-ruby@v1
       continue-on-error: ${{ matrix.allow-failure || false }}
@@ -163,7 +163,7 @@ jobs:
     - name: "sinatra-contrib tests outcome: ${{ steps.contrib-tests.outcome }}"
       run: ""
 
-    - uses: zzak/action-discord@v6
+    - uses: zzak/action-discord@2b8e933e66309e03209090ee1382d5963d98f788 # v6
       if: failure() && github.ref_name == 'main'
       continue-on-error: true # always allow failure
       with:
